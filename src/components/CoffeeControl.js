@@ -25,4 +25,27 @@ class CoffeeControl extends React.Component {
     }
   }
 
+  render(){
+    let currentlyVisibleState = null;
+    let buttonText = null;
+
+    if (this.state.selectedCoffee != null) {
+      currentlyVisibleState = <CoffeeDetail coffee = {this.state.selectedCoffee} />
+      buttonText = "Return to Coffee List";
+    } else if (this.state.formVisibleOnPage) {
+      currentlyVisibleState = <NewCoffeeForm onNewCoffeeCreation={this.handleAddingNewCoffeeToList} />;
+      buttonText = "Return to Coffee List";
+    } else {
+      currentlyVisibleState = <CoffeeList coffeeList={this.state.mainCoffeeList} onCoffeeSelection={this.handleChangingSelectedCoffee} />;
+      buttonText = "Add Coffee";
+    }
+    return (
+      <React.Fragment>
+        {currentlyVisibleState}
+        <button onClick={this.handleClick}>{buttonText}</button>
+      </React.Fragment>
+    );
+  }
 }
+
+export default CoffeeControl;
