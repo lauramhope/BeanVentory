@@ -5,7 +5,8 @@ function Coffee(props) {
   return (
     <React.Fragment>
       <div onClick = {() => props.whenCoffeeClicked(props.id)}>
-        <h3>{props.name} - {props.roast}</h3>
+        <h4>{props.name}</h4>
+        <p>{props.roast}</p>
         <p><em>{props.origin}</em></p>
         <p>{props.price}</p>
         <hr />
@@ -14,7 +15,7 @@ function Coffee(props) {
   );
 }
 
-Coffee.PropTypes = {
+Coffee.propTypes = {
   name: PropTypes.string,
   roast: PropTypes.string,
   origin: PropTypes.string,

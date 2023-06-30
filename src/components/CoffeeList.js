@@ -15,6 +15,7 @@ function CoffeeList(props) {
             roast={coffee.roast}
             origin={coffee.origin}
             price={coffee.price}
+            quantity={coffee.quantity}
             id={coffee.id}
             key={coffee.id}/>
         )}
