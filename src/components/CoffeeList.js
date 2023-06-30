@@ -18,7 +18,7 @@ function CoffeeList(props) {
             quantity={coffee.quantity}
             id={coffee.id}
             key={coffee.id}/>
-        )}
+        )};
       </div>
     </React.Fragment>
   );
