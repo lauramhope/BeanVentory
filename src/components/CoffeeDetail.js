@@ -21,14 +21,17 @@ class CoffeeDetail extends React.Component {
     const { coffee, onClickingDelete, onClickingEdit } = this.props;
     return (
       <React.Fragment>
-        <h1>Coffee Detail</h1>
-        <h3>{coffee.name} - {coffee.roast}</h3>
-        <p><em>{coffee.origin}</em></p>
-        <p>{coffee.price}</p>
-        <p>{this.state.quantity}</p>
-        <button onClick={this.handleSellCoffeeClick}>Sell Coffee</button>
-        <button onClick={()=> onClickingEdit(coffee.id) }>Edit Coffee</button>
-        <button onClick={()=> onClickingDelete(coffee.id) }>Delete Coffee</button>
+        <h3>Coffee Detail</h3>
+        <ul>
+          <li>Name | {coffee.name}</li>
+          <li>Roast | {coffee.roast}</li>
+          <li>Origin | {coffee.origin}</li>
+          <li>Price | {coffee.price}</li>
+          <li>Quantity | {this.state.quantity}</li>
+        </ul>
+        <button className="btn btn-success" onClick={this.handleSellCoffeeClick}>Sell Coffee</button>
+        <button className="btn btn-success" onClick={()=> onClickingEdit(coffee.id) }>Edit Coffee</button>
+        <button className="btn btn-success" onClick={()=> onClickingDelete(coffee.id) }>Delete Coffee</button>
         <hr/>
       </React.Fragment>
     );

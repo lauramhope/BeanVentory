@@ -5,21 +5,19 @@ import PropTypes from 'prop-types';
 function CoffeeList(props) {
   return (
     <React.Fragment>
-      <div class="coffeeList">
-        <h2>Coffee List</h2>
-        <hr />
-        {props.coffeeList.map((coffee) =>
-          <Coffee
-            whenCoffeeClicked = { props.onCoffeeSelection }
-            name={coffee.name}
-            roast={coffee.roast}
-            origin={coffee.origin}
-            price={coffee.price}
-            quantity={coffee.quantity}
-            id={coffee.id}
-            key={coffee.id}/>
-        )};
-      </div>
+      <h2>Coffee List</h2>
+      <hr />
+      {props.coffeeList.map((coffee) =>
+        <Coffee
+          whenCoffeeClicked = { props.onCoffeeSelection }
+          name={coffee.name}
+          roast={coffee.roast}
+          origin={coffee.origin}
+          price={coffee.price}
+          quantity={coffee.quantity}
+          id={coffee.id}
+          key={coffee.id}/>
+      )};
     </React.Fragment>
   );
 }

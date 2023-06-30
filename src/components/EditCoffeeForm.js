@@ -12,6 +12,7 @@ function EditCoffeeForm (props) {
       roast: event.target.roast.value,
       origin: event.target.origin.value,
       price: event.target.price.value,
+      quantity: event.target.quantity.value,
       id: coffee.id
     });
   }
@@ -26,7 +27,7 @@ function EditCoffeeForm (props) {
 }
 
 EditCoffeeForm.propTypes = {
-  // coffee: PropTypes.object,
+  coffee: PropTypes.object,
   onEditCoffee: PropTypes.func
 };
 

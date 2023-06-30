@@ -3,6 +3,7 @@ import CoffeeList from './CoffeeList';
 import NewCoffeeForm from './NewCoffeeForm';
 import CoffeeDetail from './CoffeeDetail';
 import EditCoffeeForm from './EditCoffeeForm';
+import { v4 } from 'uuid';
 
 class CoffeeControl extends React.Component {
 
@@ -10,7 +11,56 @@ class CoffeeControl extends React.Component {
     super(props);
     this.state = {
       formVisibleOnPage: false,
-      mainCoffeeList: [],
+      mainCoffeeList: [
+        {
+          name: "Stumptown House Blend",
+          roast: "Medium",
+          origin: "Portland, OR",
+          price: 16.00,
+          quantity: 130,
+          id: v4()
+        },
+        {
+          name: "Counter Culture Hologram",
+          roast: "Dark",
+          origin: "Durham, NC",
+          price: 12.00,
+          quantity: 130,
+          id: v4()
+        },
+        {
+          name: "Intelligentsia El Diablo",
+          roast: "Dark",
+          origin: "Ethiopia",
+          price: 14.00,
+          quantity: 130,
+          id: v4()
+        },
+        {
+          name: "Lavazza Super Crema",
+          roast: "Medium",
+          origin: "Torino, Italy",
+          price: 14.00,
+          quantity: 130,
+          id: v4()
+        },
+        {
+          name: "La Colombe Corsica Blend",
+          roast: "Light",
+          origin: "Central America",
+          price: 16.00,
+          quantity: 130,
+          id: v4()
+        },
+        {
+          name: "Brazil Santos Sunshine Brew",
+          roast: "Light",
+          origin: "South America",
+          price: 14.00,
+          quantity: 130,
+          id: v4()
+        }
+      ],
       selectedCoffee: null,
       editing: false
     };
@@ -50,7 +100,7 @@ class CoffeeControl extends React.Component {
   }
 
   handleEditClick = () => {
-    console.log("handleEditClick reached!");
+    // console.log("handleEditClick reached!");
     this.setState({editing: true});
   }
 
