@@ -1,5 +1,8 @@
 import React from 'react';
 import CoffeeList from './CoffeeList';
+import NewCoffeeForm from './NewCoffeeForm';
+import CoffeeDetail from './CoffeeDetail';
+// import EditCoffeeForm from './EditCoffeeForm';
 
 class CoffeeControl extends React.Component {
 
