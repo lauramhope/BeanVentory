@@ -26,7 +26,7 @@ function EditCoffeeForm (props) {
 }
 
 EditCoffeeForm.propTypes = {
-  coffee: PropTypes.object,
+  // coffee: PropTypes.object,
   onEditCoffee: PropTypes.func
 };
 

@@ -5,9 +5,39 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('./img/coffeebeans.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.header {
+  background: linear-gradient(90deg, #f8f8e3 0%, #dca039 100%);
+  padding: 20px;
+  text-align: center;
+}
+
+.coffeeDetail {
+  background: linear-gradient(90deg, #f8f8e3 0%, #dca039 100%);
+  padding: 20px;
+  text-align: center;
+}
+
+.coffeeList {
+  background: linear-gradient(90deg, #f8f8e3 0%, #dca039 100%);
+  padding: 20px;
+  text-align: center;
+}
+
+/* .coffee {
+  background: linear-gradient(90deg, #f8f8e3 0%, #dca039 100%);
+  padding: 20px;
+  text-align: center;
+} */
