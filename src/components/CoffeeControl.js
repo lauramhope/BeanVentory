@@ -100,7 +100,7 @@ class CoffeeControl extends React.Component {
   }
 
   handleEditClick = () => {
-    // console.log("handleEditClick reached!");
+    console.log("handleEditClick reached!");
     this.setState({editing: true});
   }
 
@@ -115,21 +115,42 @@ class CoffeeControl extends React.Component {
       });
   }
 
+  handleCoffeeDecrement = (coffeeOrder) => {
+    let coffeeSelect = this.state.coffeeSelect;
+    if (coffeeSelect.quantity > 0) {
+      coffeeSelect.quantity -= 1;
+    } else {
+      coffeeSelect.quantity = 0;
+    }
+    let editedMainCoffeeList = this.state.mainCoffeeList;
+    editedMainCoffeeList[this.state.mainCoffeeList.indexOf(coffeeOrder)] = coffeeSelect;
+    this.setState({mainCoffeeList: editedMainCoffeeList});
+  }
+
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
 
     if (this.state.editing ) {
-      currentlyVisibleState = <EditCoffeeForm coffee = {this.state.selectedCoffee} onEditCoffee = {this.handleEditingCoffeeInList} />
+      currentlyVisibleState = <EditCoffeeForm 
+      coffee = {this.state.selectedCoffee} 
+      onEditCoffee = {this.handleEditingCoffeeInList} />
       buttonText = "Return to Coffee List";
     } else if (this.state.selectedCoffee != null) {
-      currentlyVisibleState = <CoffeeDetail coffee = {this.state.selectedCoffee} onClickingDelete = {this.handleDeletingCoffee} onClickingEdit = {this.handleEditClick} />
+      currentlyVisibleState = <CoffeeDetail 
+      coffee = {this.state.selectedCoffee} 
+      onClickingDecrement = {this.handleCoffeeDecrement}
+      onClickingDelete = {this.handleDeletingCoffee} 
+      onClickingEdit = {this.handleEditClick} />
       buttonText = "Return to Coffee List";
     } else if (this.state.formVisibleOnPage) {
-      currentlyVisibleState = <NewCoffeeForm onNewCoffeeCreation={this.handleAddingNewCoffeeToList} />
+      currentlyVisibleState = <NewCoffeeForm 
+      onNewCoffeeCreation={this.handleAddingNewCoffeeToList} />
       buttonText = "Return to Coffee List";
     } else {
-      currentlyVisibleState = <CoffeeList coffeeList={this.state.mainCoffeeList} onCoffeeSelection={this.handleChangingSelectedCoffee} />
+      currentlyVisibleState = <CoffeeList 
+      coffeeList={this.state.mainCoffeeList} 
+      onCoffeeSelection={this.handleChangingSelectedCoffee} />
       buttonText = "Add Coffee";
     }
 

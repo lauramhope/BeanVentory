@@ -1,3 +1,64 @@
+# Coffee Bean Inventory
+
+#### By **Laura Hope**
+
+## Technologies Used
+
+* _Git_
+* _JavaScript_
+* _HTML / CSS_
+* _React_
+* _JSX_
+* _Node.js_
+* _Bootstrap version 5.2.3_
+
+
+## Description
+_This is a web application using React to display a list of coffee items with properties and the ability to read, create, update, or delete each of the items. The list of coffee items displayed on the browser can be "sold" per pound, demonstrating a decrement in total quantity starting at 130. Styling includes custom CSS and bootstrap._
+
+## Component Diagram
+
+![component diagram](./diagram.png)
+
+## Setup/Installation Requirements
+
+* _Clone the repository ```BeanVentory``` to your desktop._
+* _Open your shell (e.g., Terminal or GitBash) and navigate to this project's production directory titled ```coffee-inventory```_
+* _In your terminal or GitBash, type ```npm install`` for installing necessary dependencies to run this application_
+* _Enter ```npm run start``` to have browser access with application running_
+    * If this command doesn't automatically open the web page, you can enter http://localhost:3000/ in the browser to access application
+
+## Known Bugs
+
+* _No known issues as of 6/30/23_
+
+## License
+
+_MIT License_
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+_Copyright (c) 2023 Laura Hope_
+
+_If you run into any issues or have questions, ideas or concerns, please reach out via email: lauramhope.dpt@gmail.com.  Contributions to the code are highly encouraged._
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
