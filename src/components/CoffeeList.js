@@ -20,7 +20,7 @@ function CoffeeList(props) {
               price={coffee.price}
               quantity={coffee.quantity}
               id={coffee.id}
-              key={coffee.id}/>
+              key={coffee.id} />
           )}
           </Card.Text>
         </Card.Body>
