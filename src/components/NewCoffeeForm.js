@@ -12,6 +12,7 @@ function NewCoffeeForm(props) {
       roast: event.target.roast.value,
       origin: event.target.origin.value,
       price: event.target.price.value,
+      quantity: event.target.quantity.value,
       id: v4()
     });
   }
@@ -20,7 +21,8 @@ function NewCoffeeForm(props) {
     <React.Fragment>
       <ReusableForm
         formSubmissionHandler={handleNewCoffeeFormSubmission}
-        buttonText="Add Coffee" />
+        buttonText="Add Coffee" 
+        defaultQuantity={130}/>
     </React.Fragment>
   );
 }

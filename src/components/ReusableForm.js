@@ -8,25 +8,34 @@ function ReusableForm(props){
         <input
           type='text'
           name='name'
-          placeholder='Coffee Name' />
+          placeholder='Coffee Name' 
+          required />
+        <br />
         <input
           type='text'
           name='roast'
-          placeholder='Roast' />
+          placeholder='Roast'
+          required />
+        <br />
         <input
           type='text'
           name='origin'
-          placeholder='Origin' />
+          placeholder='Origin'
+          required />
+        <br />
         <input
           type='text'
           name='price'
-          placeholder='Price' />
+          placeholder='Price'
+          required />
+        <br />
           <input 
           type='number'
           name='quantity'
-          value='130'
-          placeholder='Quantity' 
-          disabled/>
+          value={props.defaultQuantity}
+          placeholder='Quantity'
+          required />
+        <br />
         <button type='submit'>{props.buttonText}</button>
       </form>
     </React.Fragment>
@@ -35,7 +44,8 @@ function ReusableForm(props){
 
 ReusableForm.propTypes = {
   formSubmissionHandler: PropTypes.func,
-  buttonText: PropTypes.string
+  buttonText: PropTypes.string,
+  defaultQuantity: PropTypes.number
 };
 
 export default ReusableForm;
