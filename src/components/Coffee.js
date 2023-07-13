@@ -10,6 +10,7 @@ function Coffee(props) {
           <li>Roast | {props.roast}</li>
           <li>Origin | {props.origin}</li>
           <li>Price per pound | ${props.price}</li>
+          <li>Quantity | {props.quantity} lbs</li>
         </ul>
         <hr />
       </div>
@@ -18,11 +19,11 @@ function Coffee(props) {
 }
 
 Coffee.propTypes = {
-  name: PropTypes.string.isRequired,
-  roast: PropTypes.string.isRequired,
-  origin: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
-  quantity: PropTypes.number.isRequired,
+  name: PropTypes.string,
+  roast: PropTypes.string,
+  origin: PropTypes.string,
+  price: PropTypes.number,
+  quantity: PropTypes.number,
   id: PropTypes.string,
   whenCoffeeClicked: PropTypes.func
 };
